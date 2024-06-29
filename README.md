@@ -3,70 +3,28 @@ Running a Django project in Visual Studio Code (VS Code) involves setting up you
 Step 1: Open Your Project in VS Code
 Open VS Code
 Open Visual Studio Code.
-
 Open Your Project Folder
-
 Click on File -> Open Folder.
 Select your Django project folder (contact_list_project).
-Step 2: Set Up a Virtual Environment
-Open Terminal in VS Code
 
+Step 2: Open Terminal in VS Code
 Go to View -> Terminal to open a new terminal window within VS Code.
-Create a Virtual Environment
-
-bash
-Copy code
-python -m venv venv
-Activate the Virtual Environment
-
-On Windows:
-bash
-Copy code
-venv\Scripts\activate
-On macOS and Linux:
-bash
-Copy code
-source venv/bin/activate
+Run given below code on Terminal:
+Code->cd contact_list_project
 Install Django
-If you haven't installed Django yet, run:
+If you haven't installed Django yet, run on Terminal:
+Code->pip install Django
 
-bash
-Copy code
-pip install django
-Step 3: Create Superuser (If Not Done Yet)
-Run createsuperuser Command
+Step 3: Run the Django Server
+Run the Server following this code on terminal:
+Code->python manage.py runserver
 
-bash
-Copy code
-python manage.py createsuperuser
-Follow the Prompts
-
-Enter the username, email address, and password as prompted.
-Step 4: Run the Django Server
-Run the Server
-
-bash
-Copy code
-python manage.py runserver
 Access the Application
-
 Open your web browser and navigate to http://127.0.0.1:8000/ to view the contact list.
 Navigate to http://127.0.0.1:8000/sign-up/ to view the sign-up form.
 Navigate to http://127.0.0.1:8000/admin/ to access the admin interface.
-Step 5: Create and Edit Files
-Create and Edit Files in VS Code
-Use the file explorer in VS Code to create and edit your Django app files, such as models.py, views.py, forms.py, urls.py, and templates.
-Step 6: Additional VS Code Extensions (Optional)
-Install Django and Python Extensions
-Go to the Extensions view in VS Code (Ctrl+Shift+X or Cmd+Shift+X on macOS).
-Search for and install the following extensions:
-Python by Microsoft (essential for Python development)
-Django by thecodepath (optional, but provides useful features for Django development)
-Example Structure in VS Code
-Your project structure should look something like this in the VS Code explorer:
 
-markdown
-Copy code
+Your project structure should look something like this in the VS Code explorer:
 contact_list_project/
 ├── contact_list_project/
 │   ├── __init__.py
