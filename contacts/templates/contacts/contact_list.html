@@ -3,6 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            position: relative; /* Make body a relative container */
+            min-height: 100vh; /* Ensure full viewport height */
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        li strong {
+            font-size: 18px;
+        }
+
+        li p {
+            margin: 5px 0;
+        }
+
+        /* Signup Button Styling */
+        .signup-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none; /* Remove underline */
+        }
+
+        .signup-button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <h2>Contact List</h2>
@@ -10,12 +64,17 @@
         {% for contact in contacts %}
             <li>
                 <strong>{{ contact.name }}</strong><br>
-                Address: {{ contact.address }}<br>
-                Phone: {{ contact.phone }}<br>
-                Email: {{ contact.email }}<br>
-                Hobbies: {{ contact.hobbies }}
+                <p>Address: {{ contact.address }}</p>
+                <p>Phone: {{ contact.phone }}</p>
+                <p>Email: {{ contact.email }}</p>
+                <p>Hobbies: {{ contact.hobbies }}</p>
             </li>
         {% endfor %}
     </ul>
+
+    <!-- Signup Button -->
+    <div class="signup-button">
+        <a href="{% url 'sign_up' %}" style="color: white; text-decoration: none;">Sign Up</a>
+    </div>
 </body>
 </html>
