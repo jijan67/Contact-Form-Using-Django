@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Contact</title>
+    <style>
+        .buttons .delete {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .buttons .cancel {
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .buttons .cancel:hover {
+            background-color: darkgreen;
+        }
+
+        .buttons .delete:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h2>Are you sure you want to delete {{ contact.name }}?</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="buttons">
+            <button type="submit" class="delete">Delete</button>
+            <a href="{% url 'contact_list' %}" class="cancel">Cancel</a>
+        </div>
+    </form>
+</body>
+</html>

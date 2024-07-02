@@ -28,6 +28,7 @@
             margin-bottom: 10px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Make li a relative container */
         }
 
         li strong {
@@ -36,6 +37,38 @@
 
         li p {
             margin: 5px 0;
+        }
+
+        .buttons {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .buttons a.update {
+            background-color: #28a745; /* Green color */
+        }
+
+        .buttons a.update:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        .buttons a.delete {
+            background-color: #dc3545; /* Red color */
+        }
+
+        .buttons a.delete:hover {
+            background-color: #c82333; /* Darker red on hover */
         }
 
         /* Signup Button Styling */
@@ -68,6 +101,10 @@
                 <p>Phone: {{ contact.phone }}</p>
                 <p>Email: {{ contact.email }}</p>
                 <p>Hobbies: {{ contact.hobbies }}</p>
+                <div class="buttons">
+                    <a href="{% url 'update_contact' contact.pk %}" class="update">Update</a>
+                    <a href="{% url 'delete_contact' contact.pk %}" class="delete">Delete</a>
+                </div>
             </li>
         {% endfor %}
     </ul>
