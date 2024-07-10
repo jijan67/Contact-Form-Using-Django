@@ -50,3 +50,7 @@ Given below Sign Up page:
 
 Given below Admin Page:
 ![admin page (contact form)](https://github.com/jijan67/Contact-Form-Using-Django/assets/91662300/92326cf2-74c3-4413-803f-74195590b700)
+
+Given below complete project short video:
+
+https://github.com/jijan67/Contact-Form-Using-Django/assets/91662300/6e24f44d-01c0-478e-9a76-3af99f0ffe1b
